@@ -103,7 +103,3 @@ Dashboard supports filtering & sorting
 
 This project is licensed under the MIT License — see the LICENSE
  file.
-
-
-conda create -n health_pilot python=3.10 -y
-conda activate health_pilot
