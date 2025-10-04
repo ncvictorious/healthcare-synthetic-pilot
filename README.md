@@ -26,30 +26,41 @@ This project generates synthetic healthcare data, trains baseline ML models, pro
 
 ### 1. Create a Python environment
 **Option A: Conda**
-
+```
 python -m venv .venv
 # Windows
 .venv\Scripts\activate
 # macOS/Linux
 source .venv/bin/activate
+```
 
 
 **Option B: venv**
-
+```
 python -m venv .venv
 # Windows
 .venv\Scripts\activate
 # macOS/Linux
 source .venv/bin/activate
+```
+
 
 ### 2. Install dependencies
+```
+
 pip install -r requirements.txt
+```
+
 
 ### 3. Run the pipeline
+```
+
 python src/generate_synthetic_data.py
 python src/train_baseline.py
 python src/explain_and_alerts.py
 python src/build_static_dashboard.py
+```
+
 
 ### 4. Explore outputs
 
