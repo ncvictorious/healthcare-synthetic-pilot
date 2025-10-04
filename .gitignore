@@ -1,0 +1,29 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+.venv/
+env/
+venv/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Data (if you only want synthetic dataset pushed, comment this out)
+data/*.csv
+
+# Model artifacts
+artifacts/*.pkl
+artifacts/*.joblib
+
+# Reports (optional — if you want only code tracked, not generated dashboards/alerts)
+reports/*.html
+reports/*.csv
+reports/*.json
+
+# VS Code / IDE configs
+.vscode/
+.idea/
