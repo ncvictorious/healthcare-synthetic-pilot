@@ -1,0 +1,2443 @@
+<html><head><title>Healthcare Synthetic Pilot — Deterioration Alerts</title></head><body><h1>Healthcare Synthetic Pilot — Deterioration Alerts</h1><p>Synthetic dataset; priorities driven by RandomForest probability. Drivers from Logistic Regression.</p><h2>dehydration_48h</h2><div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.1.0.min.js" integrity="sha256-Ei4740bWZhaUTQuD6q9yQlgVCMPBz6CZWhevDYPv93A=" crossorigin="anonymous"></script>                <div id="00404f10-0083-4657-9092-b17810a20cac" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("00404f10-0083-4657-9092-b17810a20cac")) {                    Plotly.newPlot(                        "00404f10-0083-4657-9092-b17810a20cac",                        [{"hovertemplate":"color=Red\u003cbr\u003ePriority=%{x}\u003cbr\u003eCount=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Red","marker":{"color":"red","pattern":{"shape":""}},"name":"Red","orientation":"v","showlegend":true,"textposition":"auto","x":["Red"],"xaxis":"x","y":{"dtype":"i1","bdata":"Cw=="},"yaxis":"y","type":"bar"},{"hovertemplate":"color=Amber\u003cbr\u003ePriority=%{x}\u003cbr\u003eCount=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Amber","marker":{"color":"orange","pattern":{"shape":""}},"name":"Amber","orientation":"v","showlegend":true,"textposition":"auto","x":["Amber"],"xaxis":"x","y":{"dtype":"i1","bdata":"Jg=="},"yaxis":"y","type":"bar"},{"hovertemplate":"color=Green\u003cbr\u003ePriority=%{x}\u003cbr\u003eCount=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Green","marker":{"color":"green","pattern":{"shape":""}},"name":"Green","orientation":"v","showlegend":true,"textposition":"auto","x":["Green"],"xaxis":"x","y":{"dtype":"i1","bdata":"Mw=="},"yaxis":"y","type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Priority"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Count"}},"legend":{"title":{"text":"color"},"tracegroupgap":0},"title":{"text":"Alert distribution for dehydration_48h"},"barmode":"relative"},                        {"responsive": true}                    )                };            </script>        </div><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>target</th>
+      <th>risk_score</th>
+      <th>priority</th>
+      <th>drv_1</th>
+      <th>drv_2</th>
+      <th>drv_3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.815</td>
+      <td>Amber</td>
+      <td>spo2_min (+5.029)</td>
+      <td>age (-3.814)</td>
+      <td>hrv_rmssd (-0.549)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.785</td>
+      <td>Amber</td>
+      <td>spo2_min (+4.982)</td>
+      <td>age (-4.564)</td>
+      <td>hrv_rmssd (-0.618)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.880</td>
+      <td>Red</td>
+      <td>spo2_min (+5.014)</td>
+      <td>age (-4.127)</td>
+      <td>hrv_rmssd (-0.591)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.215</td>
+      <td>Green</td>
+      <td>spo2_min (+4.824)</td>
+      <td>age (-4.377)</td>
+      <td>hrv_rmssd (-0.620)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.825</td>
+      <td>Amber</td>
+      <td>spo2_min (+4.978)</td>
+      <td>age (-4.627)</td>
+      <td>hrv_rmssd (-0.550)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.790</td>
+      <td>Amber</td>
+      <td>spo2_min (+4.681)</td>
+      <td>age (-4.189)</td>
+      <td>fall_history (-0.466)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.165</td>
+      <td>Green</td>
+      <td>age (-5.315)</td>
+      <td>spo2_min (+5.044)</td>
+      <td>hrv_rmssd (-0.465)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.805</td>
+      <td>Amber</td>
+      <td>age (-5.440)</td>
+      <td>spo2_min (+4.992)</td>
+      <td>infection_flag (+0.523)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.795</td>
+      <td>Amber</td>
+      <td>spo2_min (+5.096)</td>
+      <td>age (-5.002)</td>
+      <td>hrv_rmssd (-0.550)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.150</td>
+      <td>Green</td>
+      <td>spo2_min (+4.912)</td>
+      <td>age (-4.314)</td>
+      <td>hrv_rmssd (-0.541)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.150</td>
+      <td>Green</td>
+      <td>age (-5.315)</td>
+      <td>spo2_min (+5.077)</td>
+      <td>fall_history (-0.466)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.205</td>
+      <td>Green</td>
+      <td>spo2_min (+4.914)</td>
+      <td>age (-4.439)</td>
+      <td>hrv_rmssd (-0.470)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.800</td>
+      <td>Amber</td>
+      <td>spo2_min (+4.875)</td>
+      <td>age (-3.814)</td>
+      <td>hrv_rmssd (-0.596)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.170</td>
+      <td>Green</td>
+      <td>spo2_min (+4.873)</td>
+      <td>age (-4.627)</td>
+      <td>hrv_rmssd (-0.911)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.160</td>
+      <td>Green</td>
+      <td>spo2_min (+4.881)</td>
+      <td>age (-4.877)</td>
+      <td>hrv_rmssd (-0.847)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.055</td>
+      <td>Green</td>
+      <td>age (-5.252)</td>
+      <td>spo2_min (+4.770)</td>
+      <td>hrv_rmssd (-0.774)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.630</td>
+      <td>Amber</td>
+      <td>age (-5.565)</td>
+      <td>spo2_min (+4.965)</td>
+      <td>hrv_rmssd (-0.510)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.765</td>
+      <td>Amber</td>
+      <td>spo2_min (+4.870)</td>
+      <td>age (-4.314)</td>
+      <td>hrv_rmssd (-0.580)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.780</td>
+      <td>Amber</td>
+      <td>age (-5.190)</td>
+      <td>spo2_min (+4.763)</td>
+      <td>hrv_rmssd (-0.606)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.235</td>
+      <td>Green</td>
+      <td>spo2_min (+4.758)</td>
+      <td>age (-4.002)</td>
+      <td>sleep_efficiency (-0.361)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.910</td>
+      <td>Red</td>
+      <td>spo2_min (+4.907)</td>
+      <td>age (-3.814)</td>
+      <td>infection_flag (+0.523)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.725</td>
+      <td>Amber</td>
+      <td>age (-5.565)</td>
+      <td>spo2_min (+5.120)</td>
+      <td>infection_flag (+0.523)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.885</td>
+      <td>Red</td>
+      <td>spo2_min (+4.767)</td>
+      <td>age (-3.939)</td>
+      <td>hrv_rmssd (-0.650)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.730</td>
+      <td>Amber</td>
+      <td>age (-5.502)</td>
+      <td>spo2_min (+4.726)</td>
+      <td>infection_flag (+0.523)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.135</td>
+      <td>Green</td>
+      <td>spo2_min (+4.883)</td>
+      <td>age (-4.689)</td>
+      <td>hrv_rmssd (-0.946)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.740</td>
+      <td>Amber</td>
+      <td>age (-5.127)</td>
+      <td>spo2_min (+4.803)</td>
+      <td>infection_flag (+0.523)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.195</td>
+      <td>Green</td>
+      <td>spo2_min (+4.714)</td>
+      <td>age (-4.252)</td>
+      <td>hrv_rmssd (-0.655)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.760</td>
+      <td>Amber</td>
+      <td>age (-5.440)</td>
+      <td>spo2_min (+4.980)</td>
+      <td>hrv_rmssd (-0.514)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.895</td>
+      <td>Red</td>
+      <td>spo2_min (+4.827)</td>
+      <td>age (-4.127)</td>
+      <td>hrv_rmssd (-0.654)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.110</td>
+      <td>Green</td>
+      <td>age (-5.190)</td>
+      <td>spo2_min (+4.907)</td>
+      <td>hrv_rmssd (-0.592)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.840</td>
+      <td>Amber</td>
+      <td>spo2_min (+5.000)</td>
+      <td>age (-3.876)</td>
+      <td>infection_flag (+0.523)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.800</td>
+      <td>Amber</td>
+      <td>spo2_min (+5.016)</td>
+      <td>age (-4.002)</td>
+      <td>hrv_rmssd (-0.861)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.725</td>
+      <td>Amber</td>
+      <td>spo2_min (+5.050)</td>
+      <td>age (-4.877)</td>
+      <td>hrv_rmssd (-0.755)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.890</td>
+      <td>Red</td>
+      <td>spo2_min (+4.943)</td>
+      <td>age (-3.939)</td>
+      <td>infection_flag (+0.523)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.890</td>
+      <td>Red</td>
+      <td>spo2_min (+5.018)</td>
+      <td>age (-3.876)</td>
+      <td>hrv_rmssd (-0.759)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.175</td>
+      <td>Green</td>
+      <td>age (-5.377)</td>
+      <td>spo2_min (+4.836)</td>
+      <td>hrv_rmssd (-0.585)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.835</td>
+      <td>Amber</td>
+      <td>spo2_min (+4.972)</td>
+      <td>age (-3.939)</td>
+      <td>hrv_rmssd (-0.714)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.750</td>
+      <td>Amber</td>
+      <td>spo2_min (+4.920)</td>
+      <td>age (-4.814)</td>
+      <td>hrv_rmssd (-0.555)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.170</td>
+      <td>Green</td>
+      <td>age (-5.190)</td>
+      <td>spo2_min (+4.894)</td>
+      <td>hrv_rmssd (-0.664)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.805</td>
+      <td>Amber</td>
+      <td>age (-4.877)</td>
+      <td>spo2_min (+4.839)</td>
+      <td>hrv_rmssd (-0.800)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.105</td>
+      <td>Green</td>
+      <td>age (-5.502)</td>
+      <td>spo2_min (+4.997)</td>
+      <td>hrv_rmssd (-0.832)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.160</td>
+      <td>Green</td>
+      <td>spo2_min (+4.783)</td>
+      <td>age (-4.439)</td>
+      <td>infection_flag (+0.523)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.255</td>
+      <td>Green</td>
+      <td>spo2_min (+5.020)</td>
+      <td>age (-3.751)</td>
+      <td>hrv_rmssd (-0.551)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.830</td>
+      <td>Amber</td>
+      <td>spo2_min (+4.845)</td>
+      <td>age (-4.439)</td>
+      <td>sleep_efficiency (-0.443)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.320</td>
+      <td>Green</td>
+      <td>spo2_min (+4.870)</td>
+      <td>age (-3.939)</td>
+      <td>fall_history (-0.466)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.845</td>
+      <td>Amber</td>
+      <td>spo2_min (+4.897)</td>
+      <td>age (-4.752)</td>
+      <td>infection_flag (+0.523)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.155</td>
+      <td>Green</td>
+      <td>age (-5.502)</td>
+      <td>spo2_min (+4.842)</td>
+      <td>hrv_rmssd (-0.644)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.225</td>
+      <td>Green</td>
+      <td>spo2_min (+5.006)</td>
+      <td>age (-4.189)</td>
+      <td>infection_flag (+0.523)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.200</td>
+      <td>Green</td>
+      <td>age (-5.252)</td>
+      <td>spo2_min (+4.755)</td>
+      <td>hrv_rmssd (-0.682)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.820</td>
+      <td>Amber</td>
+      <td>spo2_min (+4.768)</td>
+      <td>age (-4.127)</td>
+      <td>hrv_rmssd (-0.909)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.165</td>
+      <td>Green</td>
+      <td>spo2_min (+4.985)</td>
+      <td>age (-4.877)</td>
+      <td>hrv_rmssd (-0.848)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.140</td>
+      <td>Green</td>
+      <td>age (-5.002)</td>
+      <td>spo2_min (+4.988)</td>
+      <td>hrv_rmssd (-0.693)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.220</td>
+      <td>Green</td>
+      <td>age (-5.440)</td>
+      <td>spo2_min (+4.931)</td>
+      <td>hrv_rmssd (-0.686)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.195</td>
+      <td>Green</td>
+      <td>spo2_min (+5.159)</td>
+      <td>age (-4.314)</td>
+      <td>infection_flag (+0.523)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.170</td>
+      <td>Green</td>
+      <td>spo2_min (+4.794)</td>
+      <td>age (-4.064)</td>
+      <td>hrv_rmssd (-0.799)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.070</td>
+      <td>Green</td>
+      <td>age (-5.252)</td>
+      <td>spo2_min (+4.948)</td>
+      <td>hrv_rmssd (-0.637)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.825</td>
+      <td>Amber</td>
+      <td>spo2_min (+4.997)</td>
+      <td>age (-3.751)</td>
+      <td>fall_history (-0.466)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.855</td>
+      <td>Red</td>
+      <td>spo2_min (+4.774)</td>
+      <td>age (-3.814)</td>
+      <td>hrv_rmssd (-0.566)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.185</td>
+      <td>Green</td>
+      <td>age (-5.002)</td>
+      <td>spo2_min (+4.912)</td>
+      <td>infection_flag (+0.523)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.125</td>
+      <td>Green</td>
+      <td>age (-4.877)</td>
+      <td>spo2_min (+4.858)</td>
+      <td>hrv_rmssd (-0.896)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.150</td>
+      <td>Green</td>
+      <td>age (-5.252)</td>
+      <td>spo2_min (+4.964)</td>
+      <td>infection_flag (+0.523)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.220</td>
+      <td>Green</td>
+      <td>age (-5.502)</td>
+      <td>spo2_min (+4.783)</td>
+      <td>sleep_efficiency (-0.466)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.210</td>
+      <td>Green</td>
+      <td>age (-5.377)</td>
+      <td>spo2_min (+4.929)</td>
+      <td>infection_flag (+0.523)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.880</td>
+      <td>Red</td>
+      <td>spo2_min (+4.919)</td>
+      <td>age (-4.064)</td>
+      <td>hrv_rmssd (-0.790)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.845</td>
+      <td>Amber</td>
+      <td>age (-5.127)</td>
+      <td>spo2_min (+4.821)</td>
+      <td>hrv_rmssd (-0.530)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.155</td>
+      <td>Green</td>
+      <td>spo2_min (+4.868)</td>
+      <td>age (-4.252)</td>
+      <td>hrv_rmssd (-0.767)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.860</td>
+      <td>Red</td>
+      <td>spo2_min (+4.792)</td>
+      <td>age (-4.502)</td>
+      <td>hrv_rmssd (-0.529)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.690</td>
+      <td>Amber</td>
+      <td>age (-5.440)</td>
+      <td>spo2_min (+4.893)</td>
+      <td>hrv_rmssd (-0.464)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.160</td>
+      <td>Green</td>
+      <td>age (-5.377)</td>
+      <td>spo2_min (+4.951)</td>
+      <td>hrv_rmssd (-0.967)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.760</td>
+      <td>Amber</td>
+      <td>age (-5.315)</td>
+      <td>spo2_min (+4.900)</td>
+      <td>hrv_rmssd (-0.675)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.235</td>
+      <td>Green</td>
+      <td>spo2_min (+4.968)</td>
+      <td>age (-4.814)</td>
+      <td>hrv_rmssd (-0.624)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.160</td>
+      <td>Green</td>
+      <td>age (-5.315)</td>
+      <td>spo2_min (+4.926)</td>
+      <td>hrv_rmssd (-0.537)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.205</td>
+      <td>Green</td>
+      <td>spo2_min (+5.018)</td>
+      <td>age (-4.377)</td>
+      <td>infection_flag (+0.523)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.235</td>
+      <td>Green</td>
+      <td>spo2_min (+5.007)</td>
+      <td>age (-4.189)</td>
+      <td>hrv_rmssd (-0.920)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.810</td>
+      <td>Amber</td>
+      <td>spo2_min (+4.788)</td>
+      <td>age (-4.564)</td>
+      <td>hrv_rmssd (-0.587)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.830</td>
+      <td>Amber</td>
+      <td>spo2_min (+4.972)</td>
+      <td>age (-3.814)</td>
+      <td>hrv_rmssd (-1.279)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.110</td>
+      <td>Green</td>
+      <td>age (-5.502)</td>
+      <td>spo2_min (+4.901)</td>
+      <td>hrv_rmssd (-0.637)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.300</td>
+      <td>Green</td>
+      <td>age (-5.565)</td>
+      <td>spo2_min (+4.842)</td>
+      <td>hrv_rmssd (-0.520)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.210</td>
+      <td>Green</td>
+      <td>spo2_min (+4.970)</td>
+      <td>age (-4.689)</td>
+      <td>fall_history (-0.466)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.210</td>
+      <td>Green</td>
+      <td>age (-5.064)</td>
+      <td>spo2_min (+4.716)</td>
+      <td>infection_flag (+0.523)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.300</td>
+      <td>Green</td>
+      <td>spo2_min (+5.082)</td>
+      <td>age (-4.439)</td>
+      <td>hrv_rmssd (-0.544)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.155</td>
+      <td>Green</td>
+      <td>spo2_min (+4.889)</td>
+      <td>age (-4.752)</td>
+      <td>hrv_rmssd (-0.750)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.870</td>
+      <td>Red</td>
+      <td>spo2_min (+5.055)</td>
+      <td>age (-4.627)</td>
+      <td>hrv_rmssd (-0.682)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.225</td>
+      <td>Green</td>
+      <td>spo2_min (+5.019)</td>
+      <td>age (-5.002)</td>
+      <td>hrv_rmssd (-0.583)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.100</td>
+      <td>Green</td>
+      <td>age (-5.315)</td>
+      <td>spo2_min (+4.974)</td>
+      <td>hrv_rmssd (-0.609)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.640</td>
+      <td>Amber</td>
+      <td>spo2_min (+4.863)</td>
+      <td>age (-4.752)</td>
+      <td>hrv_rmssd (-0.534)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.200</td>
+      <td>Green</td>
+      <td>spo2_min (+5.011)</td>
+      <td>age (-4.252)</td>
+      <td>hrv_rmssd (-0.764)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.775</td>
+      <td>Amber</td>
+      <td>age (-5.190)</td>
+      <td>spo2_min (+5.061)</td>
+      <td>hrv_rmssd (-0.873)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.700</td>
+      <td>Amber</td>
+      <td>spo2_min (+4.945)</td>
+      <td>age (-4.877)</td>
+      <td>hrv_rmssd (-0.898)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.180</td>
+      <td>Green</td>
+      <td>spo2_min (+4.829)</td>
+      <td>age (-4.752)</td>
+      <td>hrv_rmssd (-0.553)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.840</td>
+      <td>Amber</td>
+      <td>spo2_min (+5.036)</td>
+      <td>age (-4.002)</td>
+      <td>hrv_rmssd (-0.569)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.740</td>
+      <td>Amber</td>
+      <td>age (-5.502)</td>
+      <td>spo2_min (+4.891)</td>
+      <td>hrv_rmssd (-0.514)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.775</td>
+      <td>Amber</td>
+      <td>age (-5.127)</td>
+      <td>spo2_min (+4.964)</td>
+      <td>hrv_rmssd (-0.698)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.055</td>
+      <td>Green</td>
+      <td>age (-5.440)</td>
+      <td>spo2_min (+4.877)</td>
+      <td>hrv_rmssd (-0.672)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.785</td>
+      <td>Amber</td>
+      <td>spo2_min (+4.988)</td>
+      <td>age (-4.502)</td>
+      <td>hrv_rmssd (-0.779)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.175</td>
+      <td>Green</td>
+      <td>spo2_min (+4.777)</td>
+      <td>age (-3.751)</td>
+      <td>hrv_rmssd (-0.857)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.805</td>
+      <td>Amber</td>
+      <td>age (-5.064)</td>
+      <td>spo2_min (+4.758)</td>
+      <td>hrv_rmssd (-0.744)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.880</td>
+      <td>Red</td>
+      <td>spo2_min (+5.013)</td>
+      <td>age (-3.876)</td>
+      <td>hrv_rmssd (-0.570)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.190</td>
+      <td>Green</td>
+      <td>age (-5.565)</td>
+      <td>spo2_min (+5.058)</td>
+      <td>hrv_rmssd (-0.502)</td>
+    </tr>
+    <tr>
+      <td>dehydration_48h</td>
+      <td>0.845</td>
+      <td>Amber</td>
+      <td>spo2_min (+4.785)</td>
+      <td>age (-4.627)</td>
+      <td>med_change_flag (+0.434)</td>
+    </tr>
+  </tbody>
+</table><hr/><h2>deterioration_72h</h2><div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.1.0.min.js" integrity="sha256-Ei4740bWZhaUTQuD6q9yQlgVCMPBz6CZWhevDYPv93A=" crossorigin="anonymous"></script>                <div id="73702755-cfbe-46a4-9eb6-bad9139f9558" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("73702755-cfbe-46a4-9eb6-bad9139f9558")) {                    Plotly.newPlot(                        "73702755-cfbe-46a4-9eb6-bad9139f9558",                        [{"hovertemplate":"color=Red\u003cbr\u003ePriority=%{x}\u003cbr\u003eCount=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Red","marker":{"color":"red","pattern":{"shape":""}},"name":"Red","orientation":"v","showlegend":true,"textposition":"auto","x":["Red"],"xaxis":"x","y":{"dtype":"i1","bdata":"DA=="},"yaxis":"y","type":"bar"},{"hovertemplate":"color=Amber\u003cbr\u003ePriority=%{x}\u003cbr\u003eCount=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Amber","marker":{"color":"orange","pattern":{"shape":""}},"name":"Amber","orientation":"v","showlegend":true,"textposition":"auto","x":["Amber"],"xaxis":"x","y":{"dtype":"i1","bdata":"JA=="},"yaxis":"y","type":"bar"},{"hovertemplate":"color=Green\u003cbr\u003ePriority=%{x}\u003cbr\u003eCount=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Green","marker":{"color":"green","pattern":{"shape":""}},"name":"Green","orientation":"v","showlegend":true,"textposition":"auto","x":["Green"],"xaxis":"x","y":{"dtype":"i1","bdata":"NA=="},"yaxis":"y","type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Priority"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Count"}},"legend":{"title":{"text":"color"},"tracegroupgap":0},"title":{"text":"Alert distribution for deterioration_72h"},"barmode":"relative"},                        {"responsive": true}                    )                };            </script>        </div><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>target</th>
+      <th>risk_score</th>
+      <th>priority</th>
+      <th>drv_1</th>
+      <th>drv_2</th>
+      <th>drv_3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.185</td>
+      <td>Green</td>
+      <td>hr_mean (-2.172)</td>
+      <td>spo2_min (+1.889)</td>
+      <td>age (+1.020)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.775</td>
+      <td>Amber</td>
+      <td>hr_mean (-2.067)</td>
+      <td>spo2_min (+1.871)</td>
+      <td>age (+1.221)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.175</td>
+      <td>Green</td>
+      <td>spo2_min (+1.883)</td>
+      <td>hr_mean (-1.544)</td>
+      <td>age (+1.104)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.155</td>
+      <td>Green</td>
+      <td>hr_mean (-2.123)</td>
+      <td>spo2_min (+1.812)</td>
+      <td>age (+1.170)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.815</td>
+      <td>Amber</td>
+      <td>hr_mean (-2.033)</td>
+      <td>spo2_min (+1.870)</td>
+      <td>age (+1.237)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.845</td>
+      <td>Amber</td>
+      <td>hr_mean (-2.130)</td>
+      <td>spo2_min (+1.758)</td>
+      <td>age (+1.120)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.790</td>
+      <td>Amber</td>
+      <td>hr_mean (-1.933)</td>
+      <td>spo2_min (+1.895)</td>
+      <td>age (+1.421)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.800</td>
+      <td>Amber</td>
+      <td>hr_mean (-2.520)</td>
+      <td>spo2_min (+1.875)</td>
+      <td>age (+1.455)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.810</td>
+      <td>Amber</td>
+      <td>hr_mean (-2.546)</td>
+      <td>spo2_min (+1.914)</td>
+      <td>age (+1.338)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.145</td>
+      <td>Green</td>
+      <td>hr_mean (-2.536)</td>
+      <td>spo2_min (+1.845)</td>
+      <td>age (+1.154)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.835</td>
+      <td>Amber</td>
+      <td>spo2_min (+1.907)</td>
+      <td>hr_mean (-1.770)</td>
+      <td>age (+1.421)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.220</td>
+      <td>Green</td>
+      <td>hr_mean (-2.630)</td>
+      <td>spo2_min (+1.846)</td>
+      <td>age (+1.187)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.185</td>
+      <td>Green</td>
+      <td>spo2_min (+1.831)</td>
+      <td>hr_mean (-1.780)</td>
+      <td>age (+1.020)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.205</td>
+      <td>Green</td>
+      <td>hr_mean (-2.484)</td>
+      <td>spo2_min (+1.831)</td>
+      <td>age (+1.237)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.830</td>
+      <td>Amber</td>
+      <td>hr_mean (-1.975)</td>
+      <td>spo2_min (+1.834)</td>
+      <td>age (+1.304)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.195</td>
+      <td>Green</td>
+      <td>hr_mean (-2.073)</td>
+      <td>spo2_min (+1.792)</td>
+      <td>age (+1.404)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.685</td>
+      <td>Amber</td>
+      <td>spo2_min (+1.865)</td>
+      <td>hr_mean (-1.735)</td>
+      <td>age (+1.488)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.050</td>
+      <td>Green</td>
+      <td>hr_mean (-2.571)</td>
+      <td>spo2_min (+1.829)</td>
+      <td>age (+1.154)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.215</td>
+      <td>Green</td>
+      <td>hr_mean (-2.007)</td>
+      <td>spo2_min (+1.789)</td>
+      <td>age (+1.388)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.260</td>
+      <td>Green</td>
+      <td>hr_mean (-1.974)</td>
+      <td>spo2_min (+1.787)</td>
+      <td>age (+1.070)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.695</td>
+      <td>Amber</td>
+      <td>hr_mean (-2.335)</td>
+      <td>spo2_min (+1.843)</td>
+      <td>age (+1.020)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.820</td>
+      <td>Amber</td>
+      <td>hr_mean (-2.306)</td>
+      <td>spo2_min (+1.923)</td>
+      <td>age (+1.488)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.870</td>
+      <td>Red</td>
+      <td>hr_mean (-1.839)</td>
+      <td>spo2_min (+1.790)</td>
+      <td>age (+1.053)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.225</td>
+      <td>Green</td>
+      <td>hr_mean (-2.314)</td>
+      <td>spo2_min (+1.775)</td>
+      <td>age (+1.471)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.780</td>
+      <td>Amber</td>
+      <td>hr_mean (-2.215)</td>
+      <td>spo2_min (+1.834)</td>
+      <td>age (+1.254)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.860</td>
+      <td>Red</td>
+      <td>hr_mean (-1.855)</td>
+      <td>spo2_min (+1.804)</td>
+      <td>age (+1.371)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.210</td>
+      <td>Green</td>
+      <td>hr_mean (-1.959)</td>
+      <td>spo2_min (+1.771)</td>
+      <td>age (+1.137)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.820</td>
+      <td>Amber</td>
+      <td>hr_mean (-2.349)</td>
+      <td>spo2_min (+1.870)</td>
+      <td>age (+1.455)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.920</td>
+      <td>Red</td>
+      <td>hr_mean (-2.344)</td>
+      <td>spo2_min (+1.813)</td>
+      <td>age (+1.104)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.695</td>
+      <td>Amber</td>
+      <td>hr_mean (-2.378)</td>
+      <td>spo2_min (+1.843)</td>
+      <td>age (+1.388)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.145</td>
+      <td>Green</td>
+      <td>hr_mean (-2.699)</td>
+      <td>spo2_min (+1.878)</td>
+      <td>age (+1.037)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.145</td>
+      <td>Green</td>
+      <td>hr_mean (-2.262)</td>
+      <td>spo2_min (+1.884)</td>
+      <td>age (+1.070)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.280</td>
+      <td>Green</td>
+      <td>hr_mean (-2.564)</td>
+      <td>spo2_min (+1.897)</td>
+      <td>age (+1.304)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.105</td>
+      <td>Green</td>
+      <td>hr_mean (-2.089)</td>
+      <td>spo2_min (+1.857)</td>
+      <td>age (+1.053)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.255</td>
+      <td>Green</td>
+      <td>spo2_min (+1.885)</td>
+      <td>hr_mean (-1.641)</td>
+      <td>age (+1.037)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.110</td>
+      <td>Green</td>
+      <td>hr_mean (-2.719)</td>
+      <td>spo2_min (+1.816)</td>
+      <td>age (+1.438)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.865</td>
+      <td>Red</td>
+      <td>hr_mean (-2.244)</td>
+      <td>spo2_min (+1.867)</td>
+      <td>age (+1.053)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.175</td>
+      <td>Green</td>
+      <td>hr_mean (-1.989)</td>
+      <td>spo2_min (+1.848)</td>
+      <td>age (+1.287)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.115</td>
+      <td>Green</td>
+      <td>hr_mean (-2.357)</td>
+      <td>spo2_min (+1.838)</td>
+      <td>age (+1.388)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.210</td>
+      <td>Green</td>
+      <td>hr_mean (-2.088)</td>
+      <td>spo2_min (+1.818)</td>
+      <td>age (+1.304)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.115</td>
+      <td>Green</td>
+      <td>hr_mean (-2.088)</td>
+      <td>spo2_min (+1.877)</td>
+      <td>age (+1.471)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.795</td>
+      <td>Amber</td>
+      <td>hr_mean (-1.986)</td>
+      <td>spo2_min (+1.797)</td>
+      <td>age (+1.187)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.775</td>
+      <td>Amber</td>
+      <td>hr_mean (-2.089)</td>
+      <td>spo2_min (+1.886)</td>
+      <td>age (+1.003)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.780</td>
+      <td>Amber</td>
+      <td>hr_mean (-1.863)</td>
+      <td>spo2_min (+1.820)</td>
+      <td>age (+1.187)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.285</td>
+      <td>Green</td>
+      <td>hr_mean (-1.855)</td>
+      <td>spo2_min (+1.829)</td>
+      <td>age (+1.053)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.140</td>
+      <td>Green</td>
+      <td>hr_mean (-2.334)</td>
+      <td>spo2_min (+1.839)</td>
+      <td>age (+1.271)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.875</td>
+      <td>Red</td>
+      <td>hr_mean (-2.035)</td>
+      <td>spo2_min (+1.819)</td>
+      <td>age (+1.471)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.220</td>
+      <td>Green</td>
+      <td>hr_mean (-2.234)</td>
+      <td>spo2_min (+1.880)</td>
+      <td>age (+1.120)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.720</td>
+      <td>Amber</td>
+      <td>hr_mean (-2.342)</td>
+      <td>spo2_min (+1.786)</td>
+      <td>age (+1.404)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.775</td>
+      <td>Amber</td>
+      <td>hr_mean (-2.412)</td>
+      <td>spo2_min (+1.791)</td>
+      <td>age (+1.104)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.215</td>
+      <td>Green</td>
+      <td>hr_mean (-2.229)</td>
+      <td>spo2_min (+1.872)</td>
+      <td>age (+1.304)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.760</td>
+      <td>Amber</td>
+      <td>hr_mean (-2.303)</td>
+      <td>spo2_min (+1.874)</td>
+      <td>age (+1.338)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.730</td>
+      <td>Amber</td>
+      <td>spo2_min (+1.852)</td>
+      <td>hr_mean (-1.646)</td>
+      <td>age (+1.455)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.825</td>
+      <td>Amber</td>
+      <td>hr_mean (-1.941)</td>
+      <td>spo2_min (+1.938)</td>
+      <td>age (+1.154)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.225</td>
+      <td>Green</td>
+      <td>hr_mean (-2.359)</td>
+      <td>spo2_min (+1.801)</td>
+      <td>age (+1.087)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.165</td>
+      <td>Green</td>
+      <td>hr_mean (-2.376)</td>
+      <td>spo2_min (+1.858)</td>
+      <td>age (+1.404)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.170</td>
+      <td>Green</td>
+      <td>hr_mean (-2.258)</td>
+      <td>spo2_min (+1.877)</td>
+      <td>age (+1.003)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.770</td>
+      <td>Amber</td>
+      <td>hr_mean (-1.850)</td>
+      <td>spo2_min (+1.793)</td>
+      <td>night_movements (-1.055)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.760</td>
+      <td>Amber</td>
+      <td>hr_mean (-1.855)</td>
+      <td>spo2_min (+1.845)</td>
+      <td>age (+1.338)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.780</td>
+      <td>Amber</td>
+      <td>hr_mean (-2.515)</td>
+      <td>spo2_min (+1.825)</td>
+      <td>age (+1.304)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.150</td>
+      <td>Green</td>
+      <td>hr_mean (-2.404)</td>
+      <td>spo2_min (+1.864)</td>
+      <td>age (+1.404)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.080</td>
+      <td>Green</td>
+      <td>spo2_min (+1.797)</td>
+      <td>hr_mean (-1.727)</td>
+      <td>age (+1.471)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.165</td>
+      <td>Green</td>
+      <td>spo2_min (+1.852)</td>
+      <td>hr_mean (-1.807)</td>
+      <td>age (+1.438)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.090</td>
+      <td>Green</td>
+      <td>hr_mean (-2.523)</td>
+      <td>spo2_min (+1.848)</td>
+      <td>age (+1.087)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.810</td>
+      <td>Amber</td>
+      <td>hr_mean (-2.259)</td>
+      <td>spo2_min (+1.811)</td>
+      <td>age (+1.371)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.830</td>
+      <td>Amber</td>
+      <td>hr_mean (-2.393)</td>
+      <td>spo2_min (+1.829)</td>
+      <td>age (+1.137)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.200</td>
+      <td>Green</td>
+      <td>hr_mean (-2.241)</td>
+      <td>spo2_min (+1.800)</td>
+      <td>age (+1.204)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.200</td>
+      <td>Green</td>
+      <td>hr_mean (-1.915)</td>
+      <td>spo2_min (+1.838)</td>
+      <td>age (+1.455)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.255</td>
+      <td>Green</td>
+      <td>hr_mean (-1.937)</td>
+      <td>spo2_min (+1.860)</td>
+      <td>age (+1.438)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.890</td>
+      <td>Red</td>
+      <td>hr_mean (-1.982)</td>
+      <td>spo2_min (+1.841)</td>
+      <td>age (+1.421)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.180</td>
+      <td>Green</td>
+      <td>hr_mean (-2.502)</td>
+      <td>spo2_min (+1.866)</td>
+      <td>age (+1.287)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.115</td>
+      <td>Green</td>
+      <td>spo2_min (+1.850)</td>
+      <td>hr_mean (-1.742)</td>
+      <td>age (+1.421)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.765</td>
+      <td>Amber</td>
+      <td>hr_mean (-2.065)</td>
+      <td>spo2_min (+1.885)</td>
+      <td>age (+1.170)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.150</td>
+      <td>Green</td>
+      <td>hr_mean (-2.519)</td>
+      <td>spo2_min (+1.881)</td>
+      <td>age (+1.120)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.120</td>
+      <td>Green</td>
+      <td>hr_mean (-2.424)</td>
+      <td>spo2_min (+1.799)</td>
+      <td>age (+1.221)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.915</td>
+      <td>Red</td>
+      <td>hr_mean (-2.221)</td>
+      <td>spo2_min (+1.868)</td>
+      <td>age (+1.020)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.190</td>
+      <td>Green</td>
+      <td>hr_mean (-2.213)</td>
+      <td>spo2_min (+1.841)</td>
+      <td>age (+1.471)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.190</td>
+      <td>Green</td>
+      <td>hr_mean (-2.385)</td>
+      <td>spo2_min (+1.819)</td>
+      <td>age (+1.488)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.830</td>
+      <td>Amber</td>
+      <td>hr_mean (-1.962)</td>
+      <td>spo2_min (+1.867)</td>
+      <td>age (+1.254)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.870</td>
+      <td>Red</td>
+      <td>hr_mean (-1.843)</td>
+      <td>spo2_min (+1.772)</td>
+      <td>age (+1.354)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.870</td>
+      <td>Red</td>
+      <td>hr_mean (-2.314)</td>
+      <td>spo2_min (+1.909)</td>
+      <td>age (+1.187)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.925</td>
+      <td>Red</td>
+      <td>hr_mean (-2.076)</td>
+      <td>spo2_min (+1.836)</td>
+      <td>age (+1.271)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.885</td>
+      <td>Red</td>
+      <td>spo2_min (+1.899)</td>
+      <td>hr_mean (-1.770)</td>
+      <td>age (+1.237)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.775</td>
+      <td>Amber</td>
+      <td>hr_mean (-2.669)</td>
+      <td>spo2_min (+1.885)</td>
+      <td>age (+1.338)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.755</td>
+      <td>Amber</td>
+      <td>hr_mean (-2.284)</td>
+      <td>spo2_min (+1.868)</td>
+      <td>age (+1.421)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.240</td>
+      <td>Green</td>
+      <td>hr_mean (-2.275)</td>
+      <td>spo2_min (+1.827)</td>
+      <td>age (+1.271)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.890</td>
+      <td>Red</td>
+      <td>hr_mean (-2.106)</td>
+      <td>spo2_min (+1.882)</td>
+      <td>age (+1.137)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.265</td>
+      <td>Green</td>
+      <td>hr_mean (-2.371)</td>
+      <td>spo2_min (+1.901)</td>
+      <td>age (+1.388)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.800</td>
+      <td>Amber</td>
+      <td>hr_mean (-2.068)</td>
+      <td>spo2_min (+1.857)</td>
+      <td>age (+1.304)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.250</td>
+      <td>Green</td>
+      <td>hr_mean (-2.018)</td>
+      <td>spo2_min (+1.814)</td>
+      <td>age (+1.271)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.135</td>
+      <td>Green</td>
+      <td>hr_mean (-2.066)</td>
+      <td>spo2_min (+1.891)</td>
+      <td>age (+1.070)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.125</td>
+      <td>Green</td>
+      <td>hr_mean (-2.394)</td>
+      <td>spo2_min (+1.837)</td>
+      <td>age (+1.471)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.215</td>
+      <td>Green</td>
+      <td>spo2_min (+1.865)</td>
+      <td>hr_mean (-1.713)</td>
+      <td>age (+1.371)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.845</td>
+      <td>Amber</td>
+      <td>hr_mean (-2.115)</td>
+      <td>spo2_min (+1.832)</td>
+      <td>age (+1.455)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.835</td>
+      <td>Amber</td>
+      <td>hr_mean (-2.048)</td>
+      <td>spo2_min (+1.874)</td>
+      <td>age (+1.204)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.805</td>
+      <td>Amber</td>
+      <td>hr_mean (-1.916)</td>
+      <td>spo2_min (+1.794)</td>
+      <td>age (+1.003)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.810</td>
+      <td>Amber</td>
+      <td>hr_mean (-2.346)</td>
+      <td>spo2_min (+1.787)</td>
+      <td>age (+1.354)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.235</td>
+      <td>Green</td>
+      <td>spo2_min (+1.883)</td>
+      <td>hr_mean (-1.535)</td>
+      <td>age (+1.037)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.260</td>
+      <td>Green</td>
+      <td>hr_mean (-2.142)</td>
+      <td>spo2_min (+1.900)</td>
+      <td>age (+1.488)</td>
+    </tr>
+    <tr>
+      <td>deterioration_72h</td>
+      <td>0.180</td>
+      <td>Green</td>
+      <td>spo2_min (+1.797)</td>
+      <td>hr_mean (-1.768)</td>
+      <td>age (+1.237)</td>
+    </tr>
+  </tbody>
+</table><hr/><h2>fall_within_7d</h2><div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.1.0.min.js" integrity="sha256-Ei4740bWZhaUTQuD6q9yQlgVCMPBz6CZWhevDYPv93A=" crossorigin="anonymous"></script>                <div id="24f0132f-1936-4421-ad75-840c4a7cd168" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("24f0132f-1936-4421-ad75-840c4a7cd168")) {                    Plotly.newPlot(                        "24f0132f-1936-4421-ad75-840c4a7cd168",                        [{"hovertemplate":"color=Red\u003cbr\u003ePriority=%{x}\u003cbr\u003eCount=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Red","marker":{"color":"red","pattern":{"shape":""}},"name":"Red","orientation":"v","showlegend":true,"textposition":"auto","x":["Red"],"xaxis":"x","y":{"dtype":"i1","bdata":"Dw=="},"yaxis":"y","type":"bar"},{"hovertemplate":"color=Amber\u003cbr\u003ePriority=%{x}\u003cbr\u003eCount=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Amber","marker":{"color":"orange","pattern":{"shape":""}},"name":"Amber","orientation":"v","showlegend":true,"textposition":"auto","x":["Amber"],"xaxis":"x","y":{"dtype":"i1","bdata":"Iw=="},"yaxis":"y","type":"bar"},{"hovertemplate":"color=Green\u003cbr\u003ePriority=%{x}\u003cbr\u003eCount=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Green","marker":{"color":"green","pattern":{"shape":""}},"name":"Green","orientation":"v","showlegend":true,"textposition":"auto","x":["Green"],"xaxis":"x","y":{"dtype":"i1","bdata":"Mg=="},"yaxis":"y","type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Priority"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Count"}},"legend":{"title":{"text":"color"},"tracegroupgap":0},"title":{"text":"Alert distribution for fall_within_7d"},"barmode":"relative"},                        {"responsive": true}                    )                };            </script>        </div><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>target</th>
+      <th>risk_score</th>
+      <th>priority</th>
+      <th>drv_1</th>
+      <th>drv_2</th>
+      <th>drv_3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.855</td>
+      <td>Red</td>
+      <td>spo2_min (+2.268)</td>
+      <td>hr_mean (-1.158)</td>
+      <td>sleep_efficiency (-0.542)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.205</td>
+      <td>Green</td>
+      <td>spo2_min (+2.247)</td>
+      <td>hr_mean (-1.102)</td>
+      <td>sleep_efficiency (-0.630)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.855</td>
+      <td>Red</td>
+      <td>spo2_min (+2.261)</td>
+      <td>hr_mean (-0.823)</td>
+      <td>age (+0.547)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.130</td>
+      <td>Green</td>
+      <td>spo2_min (+2.176)</td>
+      <td>hr_mean (-1.131)</td>
+      <td>hydration_level (-0.692)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.210</td>
+      <td>Green</td>
+      <td>spo2_min (+2.245)</td>
+      <td>hr_mean (-1.084)</td>
+      <td>age (+0.614)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.210</td>
+      <td>Green</td>
+      <td>spo2_min (+2.111)</td>
+      <td>hr_mean (-1.135)</td>
+      <td>age (+0.555)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.870</td>
+      <td>Red</td>
+      <td>spo2_min (+2.275)</td>
+      <td>hr_mean (-1.030)</td>
+      <td>age (+0.705)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.155</td>
+      <td>Green</td>
+      <td>spo2_min (+2.252)</td>
+      <td>hr_mean (-1.343)</td>
+      <td>age (+0.721)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.830</td>
+      <td>Amber</td>
+      <td>spo2_min (+2.299)</td>
+      <td>hr_mean (-1.357)</td>
+      <td>hydration_level (-0.683)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.795</td>
+      <td>Amber</td>
+      <td>spo2_min (+2.216)</td>
+      <td>hr_mean (-1.352)</td>
+      <td>sleep_efficiency (-0.602)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.835</td>
+      <td>Amber</td>
+      <td>spo2_min (+2.290)</td>
+      <td>hr_mean (-0.944)</td>
+      <td>age (+0.705)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.780</td>
+      <td>Amber</td>
+      <td>spo2_min (+2.217)</td>
+      <td>hr_mean (-1.402)</td>
+      <td>age (+0.589)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.790</td>
+      <td>Amber</td>
+      <td>spo2_min (+2.199)</td>
+      <td>hr_mean (-0.949)</td>
+      <td>hydration_level (-0.689)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.750</td>
+      <td>Amber</td>
+      <td>spo2_min (+2.198)</td>
+      <td>hr_mean (-1.324)</td>
+      <td>hrv_rmssd (-0.762)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.810</td>
+      <td>Amber</td>
+      <td>spo2_min (+2.202)</td>
+      <td>hr_mean (-1.053)</td>
+      <td>hrv_rmssd (-0.709)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.115</td>
+      <td>Green</td>
+      <td>spo2_min (+2.151)</td>
+      <td>hr_mean (-1.105)</td>
+      <td>age (+0.696)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.380</td>
+      <td>Green</td>
+      <td>spo2_min (+2.240)</td>
+      <td>hr_mean (-0.925)</td>
+      <td>age (+0.738)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.860</td>
+      <td>Red</td>
+      <td>spo2_min (+2.197)</td>
+      <td>hr_mean (-1.370)</td>
+      <td>age (+0.572)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.795</td>
+      <td>Amber</td>
+      <td>spo2_min (+2.148)</td>
+      <td>hr_mean (-1.070)</td>
+      <td>age (+0.688)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.195</td>
+      <td>Green</td>
+      <td>spo2_min (+2.146)</td>
+      <td>hr_mean (-1.052)</td>
+      <td>hydration_level (-0.692)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.830</td>
+      <td>Amber</td>
+      <td>spo2_min (+2.213)</td>
+      <td>hr_mean (-1.245)</td>
+      <td>age (+0.506)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.305</td>
+      <td>Green</td>
+      <td>spo2_min (+2.309)</td>
+      <td>hr_mean (-1.229)</td>
+      <td>age (+0.738)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.200</td>
+      <td>Green</td>
+      <td>spo2_min (+2.150)</td>
+      <td>hr_mean (-0.980)</td>
+      <td>hydration_level (-0.675)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.185</td>
+      <td>Green</td>
+      <td>spo2_min (+2.132)</td>
+      <td>hr_mean (-1.234)</td>
+      <td>age (+0.730)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.135</td>
+      <td>Green</td>
+      <td>spo2_min (+2.202)</td>
+      <td>hr_mean (-1.181)</td>
+      <td>hrv_rmssd (-0.792)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.810</td>
+      <td>Amber</td>
+      <td>spo2_min (+2.166)</td>
+      <td>hr_mean (-0.989)</td>
+      <td>age (+0.680)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.095</td>
+      <td>Green</td>
+      <td>spo2_min (+2.126)</td>
+      <td>hr_mean (-1.044)</td>
+      <td>sleep_efficiency (-0.607)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.835</td>
+      <td>Amber</td>
+      <td>spo2_min (+2.246)</td>
+      <td>hr_mean (-1.252)</td>
+      <td>age (+0.721)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.095</td>
+      <td>Green</td>
+      <td>spo2_min (+2.177)</td>
+      <td>hr_mean (-1.249)</td>
+      <td>hydration_level (-0.557)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.840</td>
+      <td>Amber</td>
+      <td>spo2_min (+2.213)</td>
+      <td>hr_mean (-1.267)</td>
+      <td>age (+0.688)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.175</td>
+      <td>Green</td>
+      <td>spo2_min (+2.255)</td>
+      <td>hr_mean (-1.439)</td>
+      <td>sleep_efficiency (-0.585)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.840</td>
+      <td>Amber</td>
+      <td>spo2_min (+2.263)</td>
+      <td>hr_mean (-1.206)</td>
+      <td>hrv_rmssd (-0.721)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.815</td>
+      <td>Amber</td>
+      <td>spo2_min (+2.278)</td>
+      <td>hr_mean (-1.367)</td>
+      <td>age (+0.647)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.800</td>
+      <td>Amber</td>
+      <td>spo2_min (+2.229)</td>
+      <td>hr_mean (-1.113)</td>
+      <td>age (+0.522)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.290</td>
+      <td>Green</td>
+      <td>spo2_min (+2.263)</td>
+      <td>hr_mean (-0.875)</td>
+      <td>hrv_rmssd (-0.635)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.160</td>
+      <td>Green</td>
+      <td>spo2_min (+2.181)</td>
+      <td>hr_mean (-1.449)</td>
+      <td>age (+0.713)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.800</td>
+      <td>Amber</td>
+      <td>spo2_min (+2.242)</td>
+      <td>hr_mean (-1.196)</td>
+      <td>hrv_rmssd (-0.597)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.840</td>
+      <td>Amber</td>
+      <td>spo2_min (+2.219)</td>
+      <td>hr_mean (-1.060)</td>
+      <td>age (+0.638)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.895</td>
+      <td>Red</td>
+      <td>spo2_min (+2.207)</td>
+      <td>hr_mean (-1.256)</td>
+      <td>age (+0.688)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.115</td>
+      <td>Green</td>
+      <td>spo2_min (+2.183)</td>
+      <td>hr_mean (-1.113)</td>
+      <td>hrv_rmssd (-0.669)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.740</td>
+      <td>Amber</td>
+      <td>spo2_min (+2.254)</td>
+      <td>hr_mean (-1.113)</td>
+      <td>age (+0.730)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.725</td>
+      <td>Amber</td>
+      <td>spo2_min (+2.157)</td>
+      <td>hr_mean (-1.059)</td>
+      <td>sleep_efficiency (-0.602)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.245</td>
+      <td>Green</td>
+      <td>spo2_min (+2.264)</td>
+      <td>hr_mean (-1.114)</td>
+      <td>sleep_efficiency (-0.554)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.115</td>
+      <td>Green</td>
+      <td>spo2_min (+2.185)</td>
+      <td>hr_mean (-0.993)</td>
+      <td>age (+0.589)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.225</td>
+      <td>Green</td>
+      <td>spo2_min (+2.197)</td>
+      <td>hr_mean (-0.989)</td>
+      <td>hydration_level (-0.625)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.955</td>
+      <td>Red</td>
+      <td>spo2_min (+2.209)</td>
+      <td>hr_mean (-1.244)</td>
+      <td>age (+0.630)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.770</td>
+      <td>Amber</td>
+      <td>spo2_min (+2.184)</td>
+      <td>hr_mean (-1.084)</td>
+      <td>age (+0.730)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.790</td>
+      <td>Amber</td>
+      <td>spo2_min (+2.258)</td>
+      <td>hr_mean (-1.191)</td>
+      <td>sleep_efficiency (-0.567)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.245</td>
+      <td>Green</td>
+      <td>spo2_min (+2.145)</td>
+      <td>hr_mean (-1.248)</td>
+      <td>age (+0.696)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.170</td>
+      <td>Green</td>
+      <td>spo2_min (+2.151)</td>
+      <td>hr_mean (-1.286)</td>
+      <td>hrv_rmssd (-0.761)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.145</td>
+      <td>Green</td>
+      <td>spo2_min (+2.248)</td>
+      <td>hr_mean (-1.188)</td>
+      <td>hrv_rmssd (-0.710)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.220</td>
+      <td>Green</td>
+      <td>spo2_min (+2.250)</td>
+      <td>hr_mean (-1.227)</td>
+      <td>age (+0.663)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.865</td>
+      <td>Red</td>
+      <td>spo2_min (+2.224)</td>
+      <td>hr_mean (-0.877)</td>
+      <td>age (+0.721)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.220</td>
+      <td>Green</td>
+      <td>spo2_min (+2.327)</td>
+      <td>hr_mean (-1.035)</td>
+      <td>hydration_level (-0.617)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.095</td>
+      <td>Green</td>
+      <td>spo2_min (+2.162)</td>
+      <td>hr_mean (-1.257)</td>
+      <td>hrv_rmssd (-0.668)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.195</td>
+      <td>Green</td>
+      <td>spo2_min (+2.232)</td>
+      <td>hr_mean (-1.266)</td>
+      <td>age (+0.696)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.240</td>
+      <td>Green</td>
+      <td>spo2_min (+2.254)</td>
+      <td>hr_mean (-1.203)</td>
+      <td>age (+0.497)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.855</td>
+      <td>Red</td>
+      <td>spo2_min (+2.153)</td>
+      <td>hr_mean (-0.986)</td>
+      <td>sleep_efficiency (-0.517)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.175</td>
+      <td>Green</td>
+      <td>spo2_min (+2.215)</td>
+      <td>hr_mean (-0.989)</td>
+      <td>hydration_level (-0.688)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.155</td>
+      <td>Green</td>
+      <td>spo2_min (+2.191)</td>
+      <td>hr_mean (-1.340)</td>
+      <td>hrv_rmssd (-0.750)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.150</td>
+      <td>Green</td>
+      <td>spo2_min (+2.239)</td>
+      <td>hr_mean (-1.281)</td>
+      <td>age (+0.696)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.810</td>
+      <td>Amber</td>
+      <td>spo2_min (+2.157)</td>
+      <td>hr_mean (-0.920)</td>
+      <td>age (+0.730)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.280</td>
+      <td>Green</td>
+      <td>spo2_min (+2.223)</td>
+      <td>hr_mean (-0.963)</td>
+      <td>age (+0.713)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.175</td>
+      <td>Green</td>
+      <td>spo2_min (+2.219)</td>
+      <td>hr_mean (-1.345)</td>
+      <td>hrv_rmssd (-0.661)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.860</td>
+      <td>Red</td>
+      <td>spo2_min (+2.174)</td>
+      <td>hr_mean (-1.204)</td>
+      <td>age (+0.680)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.220</td>
+      <td>Green</td>
+      <td>spo2_min (+2.196)</td>
+      <td>hr_mean (-1.276)</td>
+      <td>hrv_rmssd (-0.642)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.805</td>
+      <td>Amber</td>
+      <td>spo2_min (+2.162)</td>
+      <td>hr_mean (-1.195)</td>
+      <td>hydration_level (-0.686)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.765</td>
+      <td>Amber</td>
+      <td>spo2_min (+2.207)</td>
+      <td>hr_mean (-1.021)</td>
+      <td>age (+0.721)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.250</td>
+      <td>Green</td>
+      <td>spo2_min (+2.233)</td>
+      <td>hr_mean (-1.033)</td>
+      <td>hrv_rmssd (-0.809)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.835</td>
+      <td>Amber</td>
+      <td>spo2_min (+2.210)</td>
+      <td>hr_mean (-1.056)</td>
+      <td>age (+0.705)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.205</td>
+      <td>Green</td>
+      <td>spo2_min (+2.241)</td>
+      <td>hr_mean (-1.334)</td>
+      <td>age (+0.638)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.170</td>
+      <td>Green</td>
+      <td>spo2_min (+2.222)</td>
+      <td>hr_mean (-0.929)</td>
+      <td>age (+0.705)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.905</td>
+      <td>Red</td>
+      <td>spo2_min (+2.263)</td>
+      <td>hr_mean (-1.101)</td>
+      <td>age (+0.580)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.205</td>
+      <td>Green</td>
+      <td>spo2_min (+2.258)</td>
+      <td>hr_mean (-1.342)</td>
+      <td>hrv_rmssd (-0.770)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.805</td>
+      <td>Amber</td>
+      <td>spo2_min (+2.160)</td>
+      <td>hr_mean (-1.292)</td>
+      <td>age (+0.605)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.175</td>
+      <td>Green</td>
+      <td>spo2_min (+2.243)</td>
+      <td>hr_mean (-1.184)</td>
+      <td>hrv_rmssd (-1.070)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.785</td>
+      <td>Amber</td>
+      <td>spo2_min (+2.210)</td>
+      <td>hr_mean (-1.179)</td>
+      <td>age (+0.730)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.775</td>
+      <td>Amber</td>
+      <td>spo2_min (+2.184)</td>
+      <td>hr_mean (-1.271)</td>
+      <td>age (+0.738)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.930</td>
+      <td>Red</td>
+      <td>spo2_min (+2.242)</td>
+      <td>hr_mean (-1.046)</td>
+      <td>age (+0.622)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.765</td>
+      <td>Amber</td>
+      <td>spo2_min (+2.127)</td>
+      <td>hr_mean (-0.982)</td>
+      <td>age (+0.672)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.340</td>
+      <td>Green</td>
+      <td>spo2_min (+2.292)</td>
+      <td>hr_mean (-1.233)</td>
+      <td>hydration_level (-0.632)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.125</td>
+      <td>Green</td>
+      <td>spo2_min (+2.205)</td>
+      <td>hr_mean (-1.107)</td>
+      <td>age (+0.630)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.235</td>
+      <td>Green</td>
+      <td>spo2_min (+2.280)</td>
+      <td>hr_mean (-0.943)</td>
+      <td>age (+0.614)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.755</td>
+      <td>Amber</td>
+      <td>spo2_min (+2.264)</td>
+      <td>hr_mean (-1.422)</td>
+      <td>age (+0.663)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.255</td>
+      <td>Green</td>
+      <td>spo2_min (+2.243)</td>
+      <td>hr_mean (-1.217)</td>
+      <td>age (+0.705)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.160</td>
+      <td>Green</td>
+      <td>spo2_min (+2.193)</td>
+      <td>hr_mean (-1.213)</td>
+      <td>age (+0.630)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.840</td>
+      <td>Amber</td>
+      <td>spo2_min (+2.260)</td>
+      <td>hr_mean (-1.122)</td>
+      <td>hrv_rmssd (-0.639)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.795</td>
+      <td>Amber</td>
+      <td>spo2_min (+2.283)</td>
+      <td>hr_mean (-1.264)</td>
+      <td>hrv_rmssd (-0.731)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.815</td>
+      <td>Amber</td>
+      <td>spo2_min (+2.230)</td>
+      <td>hr_mean (-1.102)</td>
+      <td>hrv_rmssd (-0.752)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.890</td>
+      <td>Red</td>
+      <td>spo2_min (+2.178)</td>
+      <td>hr_mean (-1.076)</td>
+      <td>hydration_level (-0.664)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.935</td>
+      <td>Red</td>
+      <td>spo2_min (+2.271)</td>
+      <td>hr_mean (-1.101)</td>
+      <td>sleep_efficiency (-0.609)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.285</td>
+      <td>Green</td>
+      <td>spo2_min (+2.206)</td>
+      <td>hr_mean (-1.276)</td>
+      <td>age (+0.730)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.905</td>
+      <td>Red</td>
+      <td>spo2_min (+2.239)</td>
+      <td>hr_mean (-0.913)</td>
+      <td>age (+0.680)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.170</td>
+      <td>Green</td>
+      <td>spo2_min (+2.200)</td>
+      <td>hr_mean (-1.127)</td>
+      <td>age (+0.721)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.835</td>
+      <td>Amber</td>
+      <td>spo2_min (+2.250)</td>
+      <td>hr_mean (-1.092)</td>
+      <td>hrv_rmssd (-0.652)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.085</td>
+      <td>Green</td>
+      <td>spo2_min (+2.155)</td>
+      <td>hr_mean (-1.021)</td>
+      <td>hrv_rmssd (-0.717)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.085</td>
+      <td>Green</td>
+      <td>spo2_min (+2.146)</td>
+      <td>hr_mean (-1.251)</td>
+      <td>hydration_level (-0.673)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.815</td>
+      <td>Amber</td>
+      <td>spo2_min (+2.261)</td>
+      <td>hr_mean (-0.818)</td>
+      <td>hydration_level (-0.555)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.865</td>
+      <td>Red</td>
+      <td>spo2_min (+2.282)</td>
+      <td>hr_mean (-1.142)</td>
+      <td>age (+0.738)</td>
+    </tr>
+    <tr>
+      <td>fall_within_7d</td>
+      <td>0.150</td>
+      <td>Green</td>
+      <td>spo2_min (+2.158)</td>
+      <td>hr_mean (-0.942)</td>
+      <td>age (+0.614)</td>
+    </tr>
+  </tbody>
+</table><p><b>Legend:</b> Red ≥ 0.85; Amber ≥ 0.60; else Green.</p></body></html>

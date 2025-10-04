@@ -1,0 +1,95 @@
+{
+  "deterioration_72h": {
+    "random_forest": {
+      "auroc": 1.0,
+      "auprc": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0
+    },
+    "logistic_regression": {
+      "auroc": 0.6089743589743589,
+      "auprc": 0.6492632360195474,
+      "precision": 0.5476190476190477,
+      "recall": 0.4791666666666667,
+      "f1": 0.5111111111111111,
+      "accuracy": 0.56
+    },
+    "feature_importances_rf": {
+      "age": 0.09603264204580234,
+      "hr_mean": 0.12410464934739847,
+      "hrv_rmssd": 0.11757869684856517,
+      "spo2_min": 0.12894265395422574,
+      "steps_24h": 0.10187522818854564,
+      "sleep_efficiency": 0.1428018655011044,
+      "night_movements": 0.10514151682506988,
+      "infection_flag": 0.014799287532675544,
+      "med_change_flag": 0.01583168467704136,
+      "fall_history": 0.018162919197369044,
+      "hydration_level": 0.13472885588220243
+    }
+  },
+  "fall_within_7d": {
+    "random_forest": {
+      "auroc": 1.0,
+      "auprc": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0
+    },
+    "logistic_regression": {
+      "auroc": 0.6447999999999999,
+      "auprc": 0.6062805442512227,
+      "precision": 0.6041666666666666,
+      "recall": 0.58,
+      "f1": 0.5918367346938775,
+      "accuracy": 0.6
+    },
+    "feature_importances_rf": {
+      "age": 0.08730266336930373,
+      "hr_mean": 0.10658442853912761,
+      "hrv_rmssd": 0.14360310310321112,
+      "spo2_min": 0.13466104637634885,
+      "steps_24h": 0.12891356338861515,
+      "sleep_efficiency": 0.12327699353590625,
+      "night_movements": 0.1111135803914592,
+      "infection_flag": 0.017947482224483877,
+      "med_change_flag": 0.014291562837211426,
+      "fall_history": 0.017599230722028913,
+      "hydration_level": 0.11470634551230367
+    }
+  },
+  "dehydration_48h": {
+    "random_forest": {
+      "auroc": 0.9999999999999999,
+      "auprc": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0
+    },
+    "logistic_regression": {
+      "auroc": 0.6974789915966386,
+      "auprc": 0.6799985302758063,
+      "precision": 0.6511627906976745,
+      "recall": 0.5714285714285714,
+      "f1": 0.6086956521739131,
+      "accuracy": 0.64
+    },
+    "feature_importances_rf": {
+      "age": 0.1615658315768482,
+      "hr_mean": 0.10513863961008299,
+      "hrv_rmssd": 0.113799336033423,
+      "spo2_min": 0.09357914629701797,
+      "steps_24h": 0.11876299528351535,
+      "sleep_efficiency": 0.13733202681647358,
+      "night_movements": 0.10276198841006431,
+      "infection_flag": 0.018892810286939614,
+      "med_change_flag": 0.020295993307695645,
+      "fall_history": 0.01679831550794365,
+      "hydration_level": 0.11107291686999572
+    }
+  }
+}
