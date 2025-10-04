@@ -1,52 +1,85 @@
 # Healthcare Synthetic Pilot (Stage 0)
 
-This is a self-contained project to demonstrate the Stage 0 **Synthetic Data Pilot** for the Healthcare risk-alert system.
+[![Python](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/downloads/release/python-3100/)
+[![Dependencies](https://img.shields.io/badge/dependencies-scikit--learn%2C%20pandas%2C%20dash%2C%20plotly-green)](requirements.txt)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-## What you get
-- **data/synthetic_healthcare.csv** — 100 synthetic rows
-- **src/** — scripts for preprocessing, training, explaining, and alert generation
-- **reports/** — evaluation metrics and a static dashboard HTML
-- **artifacts/** — saved models and generated alerts
-- **notebooks/** — one end-to-end notebook (optional)
+This project demonstrates the Stage 0 **Synthetic Data Pilot** for a Healthcare risk-alert system.  
+It generates synthetic data, trains baseline machine learning models, produces alerts, and builds dashboards (both static and interactive).  
 
-## Quick Start (recommended)
-### 1) Create a Python environment
-- **Option A (Conda)**  
+---
+
+## 📂 Project Structure
+
+- **data/synthetic_dataset.csv** — synthetic patient records
+- **src/** — scripts for data generation, training, explaining, and dashboards
+- **artifacts/** — saved models (`.pkl`) and training outputs
+- **reports/** — metrics, alerts, and dashboards
+- **notebooks/** — optional end-to-end notebook
+
+---
+
+## 🚀 Quick Start
+
+### 1. Create a Python environment
+- **Option A (Conda)**
   ```bash
   conda create -n health_pilot python=3.10 -y
   conda activate health_pilot
-  ```
-- **Option B (venv)**  
-  ```bash
-  python -m venv .venv
-  # Windows: .venv\Scripts\activate
-  # macOS/Linux:
-  source .venv/bin/activate
-  ```
+Option B (venv)
 
-### 2) Install dependencies
-```bash
+bash
+Copy code
+python -m venv .venv
+# Windows
+.venv\Scripts\activate
+# macOS/Linux
+source .venv/bin/activate
+2. Install dependencies
+bash
+Copy code
 pip install -r requirements.txt
-```
-
-### 3) Run the pipeline (scripts)
+3. Run the pipeline (scripts)
 From the project root:
-```bash
+
+bash
+Copy code
 python src/generate_synthetic_data.py
 python src/train_baseline.py
 python src/explain_and_alerts.py
 python src/build_static_dashboard.py
-```
+4. Explore the outputs
+reports/metrics.json — model evaluation (AUROC, AUPRC, precision, recall, F1)
 
-### 4) Inspect outputs
-- **reports/metrics.json** — model metrics (AUROC, AUPRC, precision, recall, F1)
-- **artifacts/alerts_deterioration.json** — alert cards for deterioration (similarly for fall & dehydration)
-- **reports/dashboard.html** — open in your browser for a static dashboard view
+reports/alerts.csv — combined alerts (deterioration, falls, dehydration)
 
-## End-to-end in a Notebook (optional)
-Open `notebooks/stage0_healthcare_pipeline.ipynb` and run all cells.
+reports/dashboard.html — static dashboard view
 
-## Notes
-- Baseline models use scikit-learn (RandomForest + Logistic Regression for explainability).
-- Alert thresholds: **Red ≥ 0.85**, **Amber ≥ 0.6**, else **Green**.
-- You can tweak thresholds in `src/explain_and_alerts.py`.
+src/app.py — interactive Dash app (run python src/app.py and open http://127.0.0.1:8050)
+
+📊 Sample Dashboard
+
+(Replace with your own screenshot from reports/dashboard.html or the running Dash app.)
+
+🧠 Models
+RandomForest → risk scoring (probabilities)
+
+Logistic Regression → explainability (top feature drivers)
+
+Alerts are prioritized by thresholds:
+
+Red ≥ 0.85
+
+Amber ≥ 0.60
+
+Green otherwise
+
+📝 Notes
+Data is synthetic, for demonstration purposes only.
+
+Thresholds can be tuned in src/explain_and_alerts.py.
+
+Dashboard supports basic filtering and sorting.
+
+📜 License
+This project is licensed under the MIT License — see the LICENSE file for details.
