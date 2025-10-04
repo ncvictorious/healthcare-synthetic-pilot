@@ -66,7 +66,10 @@ src/app.py → interactive Dash app (python src/app.py → http://127.0.0.1:8050
 
 📊 Sample Dashboard
 
-(screenshot from reports/dashboard.html or the running Dash app)
+📊 Sample Dashboard
+
+![Dashboard Screenshot](docs/dashboard_sample.png)
+
 
 🧠 Models
 
