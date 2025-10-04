@@ -72,18 +72,18 @@ reports/dashboard.html → static dashboard (open in browser)
 
 Run python src/app.py → interactive dashboard at http://127.0.0.1:8050
 
-📊 Sample Dashboard
+### 📊 Sample Dashboard
 
 ![Dashboard Screenshot](docs/dashboard_sample.png)
 
 
-🧠 Models
+### 🧠 Models
 
 RandomForest → risk scoring (probabilities)
 
 Logistic Regression → explainability (top drivers)
 
-Alert thresholds:
+### Alert thresholds:
 
 🔴 Red: ≥ 0.85
 
@@ -91,7 +91,7 @@ Alert thresholds:
 
 🟢 Green: otherwise
 
-📝 Notes
+### 📝 Notes
 
 Data is synthetic, for demonstration purposes only
 
@@ -99,7 +99,7 @@ Thresholds configurable in src/explain_and_alerts.py
 
 Dashboard supports filtering & sorting
 
-📜 License
+### 📜 License
 
 This project is licensed under the MIT License — see the LICENSE
  file.
