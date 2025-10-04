@@ -22,7 +22,7 @@ This project generates synthetic healthcare data, trains baseline ML models, pro
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Create a Python environment
 **Option A: Conda**
