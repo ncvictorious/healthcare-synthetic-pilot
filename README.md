@@ -26,12 +26,13 @@ This project generates synthetic healthcare data, trains baseline ML models, pro
 
 ### 1. Create a Python environment
 **Option A: Conda**
-```bash
+
 python -m venv .venv
 # Windows
 .venv\Scripts\activate
 # macOS/Linux
 source .venv/bin/activate
+
 
 **Option B: venv**
 
